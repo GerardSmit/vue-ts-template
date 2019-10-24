@@ -15,8 +15,6 @@ module.exports = {
     "@vue/typescript"
   ],
   rules: {
-    "@typescript-eslint/explicit-function-return-type": ["error", {
-        "allowExpressions": true
-      }]
+    "@typescript-eslint/explicit-function-return-type": "off"
   },
 }
