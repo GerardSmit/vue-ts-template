@@ -4,7 +4,7 @@
     <label>
       Name:
       <input v-model="name" type="text" />
-  </label>
+    </label>
   </div>
 </template>
 

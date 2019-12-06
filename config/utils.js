@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { join } = require("path");
+const fs = require("fs");
 
 /**
  * Convert the aliases defined in tsconfig.json to webpack aliases.
  */
-export function getTsAlias() {
+exports.getTsAlias = function() {
   const root = join(__dirname, "..");
   const tsconfig = JSON.parse(
     fs.readFileSync(join(root, "tsconfig.json"), "utf-8")
