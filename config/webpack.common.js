@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const { VueLoaderPlugin } = require("vue-loader");
 const { join } = require("path");
+const { getTsAlias } = require("./utils");
 
 const root = join(__dirname, "..");
 
@@ -18,7 +19,8 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json", ".scss", ".vue"]
+    extensions: [".ts", ".tsx", ".js", ".json", ".scss", ".vue"],
+    alias: getTsAlias()
   },
 
   module: {
@@ -78,7 +80,6 @@ module.exports = {
         };
       }
     }),
-    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
 };

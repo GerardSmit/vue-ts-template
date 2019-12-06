@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "outDir": "./dist/",
     "sourceMap": true,
     "module": "commonjs",
@@ -9,10 +10,13 @@
     "noImplicitAny": true,
     "lib": [
       "dom",
-      "es2015", 
+      "es2015",
       "es2015.collection",
       "es2015.iterable"
-    ]
+    ],
+    "paths": {
+      "@/*": ["*"]
+    }
   },
   "include": [
     "./src/**/*",

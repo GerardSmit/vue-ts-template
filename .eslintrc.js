@@ -15,6 +15,7 @@ module.exports = {
     "@vue/typescript"
   ],
   rules: {
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": "warn"
   },
-}
+};

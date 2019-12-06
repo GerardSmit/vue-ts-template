@@ -1,7 +1,10 @@
 <template>
   <div>
     <h1>Hello {{ name }}!</h1>
-    Name: <input v-model="name" type="text" />
+    <label>
+      Name:
+      <input v-model="name" type="text" />
+  </label>
   </div>
 </template>
 
