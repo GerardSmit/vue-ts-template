@@ -2,6 +2,7 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
 const { join } = require("path");
+const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 const root = join(__dirname, "..");
 
@@ -15,5 +16,6 @@ module.exports = merge(common, {
     headers: {
       "Access-Control-Allow-Origin": "*"
     }
-  }
+  },
+  plugins: [new HardSourceWebpackPlugin()],
 });

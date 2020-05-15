@@ -71,7 +71,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(root, "wwwroot/index.ejs"),
       inject: false,
-      templateParameters: function(compilation, assets, options) {
+      templateParameters: function (compilation, assets, options) {
         return {
           files: assets,
           options: options,
