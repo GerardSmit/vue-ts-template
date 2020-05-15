@@ -3,5 +3,5 @@ import Root from "@/Root.vue";
 
 new Vue({
   el: "#app",
-  render: h => h(Root)
+  render: (h) => h(Root),
 });
