@@ -5,7 +5,7 @@ const fs = require("fs");
 /**
  * Convert the aliases defined in tsconfig.json to webpack aliases.
  */
-exports.getTsAlias = function() {
+exports.getTsAlias = function () {
   const root = join(__dirname, "..");
   const tsconfig = JSON.parse(
     fs.readFileSync(join(root, "tsconfig.json"), "utf-8")

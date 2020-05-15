@@ -11,16 +11,16 @@ const root = join(__dirname, "..");
 
 module.exports = {
   entry: {
-    main: join(root, "src/index.ts")
+    main: join(root, "src/index.ts"),
   },
   output: {
     filename: "[name].js",
-    path: join(root, "dist")
+    path: join(root, "dist"),
   },
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json", ".scss", ".vue"],
-    alias: getTsAlias()
+    alias: getTsAlias(),
   },
 
   module: {
@@ -33,35 +33,35 @@ module.exports = {
             loader: "ts-loader",
             options: {
               transpileOnly: true,
-              appendTsSuffixTo: [/\.vue$/]
-            }
-          }
-        ]
+              appendTsSuffixTo: [/\.vue$/],
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader" },
-          { loader: "sass-loader" }
-        ]
+          { loader: "sass-loader" },
+        ],
       },
       {
         test: /\.css$/,
-        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }],
       },
       {
         enforce: "pre",
         test: /\.js$/,
-        loader: "source-map-loader"
+        loader: "source-map-loader",
       },
       {
         enforce: "pre",
         test: /\.(js|vue|ts)$/,
         loader: "eslint-loader",
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
 
   plugins: [
@@ -76,10 +76,10 @@ module.exports = {
           files: assets,
           options: options,
           webpackConfig: compilation.options,
-          webpack: compilation.getStats().toJson()
+          webpack: compilation.getStats().toJson(),
         };
-      }
+      },
     }),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };

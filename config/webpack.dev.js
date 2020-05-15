@@ -14,8 +14,8 @@ module.exports = merge(common, {
     contentBase: join(root, "wwwroot"),
     hot: true,
     headers: {
-      "Access-Control-Allow-Origin": "*"
-    }
+      "Access-Control-Allow-Origin": "*",
+    },
   },
   plugins: [new HardSourceWebpackPlugin()],
 });
